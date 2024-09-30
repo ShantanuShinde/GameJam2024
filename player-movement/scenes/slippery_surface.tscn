@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bscffgdfcxiye"]
+
+[ext_resource type="Script" path="res://scenes/slippery_surface.gd" id="1_igxqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijd11"]
+size = Vector2(105, 51)
+
+[node name="SlipperySurface" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_igxqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+scale = Vector2(1.44, 1)
+shape = SubResource("RectangleShape2D_ijd11")
