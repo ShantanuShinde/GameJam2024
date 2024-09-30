@@ -1,0 +1,178 @@
+[gd_scene load_steps=10 format=3 uid="uid://vtp5b2ti7tfx"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4wal3"]
+[ext_resource type="FontFile" uid="uid://do2vby5fms4af" path="res://assets/Coffee Soda.ttf" id="2_15ujb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00mdb"]
+bg_color = Color(0.411375, 0.681972, 0.307391, 1)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0.314551, 0.218955, 0.186759, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftdrt"]
+bg_color = Color(0.395156, 0.568192, 0.886245, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nflge"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncvhr"]
+bg_color = Color(0.91664, 0.91664, 0.91664, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="Animation" id="Animation_uath3"]
+resource_name = "Title Animation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/Title:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5, 0.533333, 0.566667, 0.6, 0.633333, 0.666667, 0.7, 0.733333, 0.766667, 0.8, 0.833333, 0.866667, 0.9, 0.933333, 0.966667, 1, 1.03333, 1.06667, 1.1, 1.13333, 1.16667, 1.2, 1.23333, 1.26667, 1.3, 1.33333, 1.36667, 1.4, 1.43333, 1.46667, 1.5, 1.53333, 1.56667, 1.6, 1.63333, 1.66667, 1.7, 1.73333, 1.76667, 1.8, 1.83333, 1.86667, 1.9, 1.93333, 1.96667, 2, 2.03333, 2.06667, 2.1, 2.13333, 2.16667, 2.2, 2.23333, 2.26667, 2.3, 2.33333, 2.36667, 2.4, 2.43333, 2.46667, 2.5, 2.53333, 2.56667, 2.6, 2.63333, 2.66667, 2.7, 2.73333, 2.76667, 2.8, 2.83333, 2.86667, 2.9, 2.93333, 2.96667, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.0223078, 0.254759, 0.336927, 1), Color(0.0239964, 0.26162, 0.345596, 1), Color(0.025685, 0.268482, 0.354265, 1), Color(0.0273736, 0.275343, 0.362934, 1), Color(0.0290623, 0.282205, 0.371604, 1), Color(0.0307509, 0.289066, 0.380273, 1), Color(0.0324395, 0.295928, 0.388942, 1), Color(0.0341281, 0.302789, 0.397611, 1), Color(0.0358167, 0.309651, 0.40628, 1), Color(0.0375053, 0.316512, 0.414949, 1), Color(0.0391939, 0.323374, 0.423618, 1), Color(0.0408826, 0.330235, 0.432288, 1), Color(0.0425712, 0.337097, 0.440957, 1), Color(0.0442598, 0.343958, 0.449626, 1), Color(0.0459484, 0.350819, 0.458295, 1), Color(0.047637, 0.357681, 0.466964, 1), Color(0.0493256, 0.364542, 0.475633, 1), Color(0.0510143, 0.371404, 0.484302, 1), Color(0.0527029, 0.378265, 0.492972, 1), Color(0.0543915, 0.385127, 0.501641, 1), Color(0.0560801, 0.391988, 0.51031, 1), Color(0.0577687, 0.39885, 0.518979, 1), Color(0.0594573, 0.405711, 0.527648, 1), Color(0.0611459, 0.412573, 0.536317, 1), Color(0.0628346, 0.419434, 0.544986, 1), Color(0.0645232, 0.426296, 0.553656, 1), Color(0.0662118, 0.433157, 0.562325, 1), Color(0.0679004, 0.440018, 0.570994, 1), Color(0.069589, 0.44688, 0.579663, 1), Color(0.0712776, 0.453741, 0.588332, 1), Color(0.0729662, 0.460603, 0.597001, 1), Color(0.0746549, 0.467464, 0.60567, 1), Color(0.0763435, 0.474326, 0.61434, 1), Color(0.0780321, 0.481187, 0.623009, 1), Color(0.0797207, 0.488049, 0.631678, 1), Color(0.0814093, 0.49491, 0.640347, 1), Color(0.0830979, 0.501772, 0.649016, 1), Color(0.0847865, 0.508633, 0.657685, 1), Color(0.0864752, 0.515495, 0.666354, 1), Color(0.0881638, 0.522356, 0.675023, 1), Color(0.0898524, 0.529217, 0.683693, 1), Color(0.091541, 0.536079, 0.692362, 1), Color(0.0932296, 0.54294, 0.701031, 1), Color(0.0949182, 0.549802, 0.7097, 1), Color(0.0966069, 0.556663, 0.718369, 1), Color(0.0982955, 0.563525, 0.727038, 1), Color(0.0999841, 0.570386, 0.735707, 1), Color(0.0982187, 0.563213, 0.726644, 1), Color(0.0964533, 0.55604, 0.717581, 1), Color(0.094688, 0.548866, 0.708518, 1), Color(0.0929226, 0.541693, 0.699455, 1), Color(0.0911572, 0.534519, 0.690391, 1), Color(0.0893918, 0.527346, 0.681328, 1), Color(0.0876265, 0.520173, 0.672265, 1), Color(0.0858611, 0.512999, 0.663202, 1), Color(0.0840957, 0.505826, 0.654139, 1), Color(0.0823304, 0.498653, 0.645076, 1), Color(0.080565, 0.491479, 0.636012, 1), Color(0.0787996, 0.484306, 0.626949, 1), Color(0.0770343, 0.477133, 0.617886, 1), Color(0.0752689, 0.469959, 0.608823, 1), Color(0.0735035, 0.462786, 0.59976, 1), Color(0.0717382, 0.455613, 0.590696, 1), Color(0.0699728, 0.448439, 0.581633, 1), Color(0.0682074, 0.441266, 0.57257, 1), Color(0.066442, 0.434093, 0.563507, 1), Color(0.0646767, 0.426919, 0.554444, 1), Color(0.0629113, 0.419746, 0.54538, 1), Color(0.0611459, 0.412573, 0.536317, 1), Color(0.0593806, 0.405399, 0.527254, 1), Color(0.0576152, 0.398226, 0.518191, 1), Color(0.0558498, 0.391053, 0.509128, 1), Color(0.0540845, 0.383879, 0.500064, 1), Color(0.0523191, 0.376706, 0.491001, 1), Color(0.0505537, 0.369533, 0.481938, 1), Color(0.0487883, 0.362359, 0.472875, 1), Color(0.047023, 0.355186, 0.463812, 1), Color(0.0452576, 0.348013, 0.454748, 1), Color(0.0434922, 0.340839, 0.445685, 1), Color(0.0417269, 0.333666, 0.436622, 1), Color(0.0399615, 0.326492, 0.427559, 1), Color(0.0381961, 0.319319, 0.418496, 1), Color(0.0364308, 0.312146, 0.409433, 1), Color(0.0346654, 0.304972, 0.400369, 1), Color(0.0329, 0.297799, 0.391306, 1), Color(0.0311346, 0.290626, 0.382243, 1), Color(0.0293693, 0.283452, 0.37318, 1), Color(0.0276039, 0.276279, 0.364117, 1), Color(0.0258385, 0.269106, 0.355053, 1), Color(0.0240732, 0.261932, 0.34599, 1), Color(0.0223078, 0.254759, 0.336927, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cawsa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/Title:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0223078, 0.254759, 0.336927, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gnssg"]
+_data = {
+"RESET": SubResource("Animation_cawsa"),
+"Title Animation": SubResource("Animation_uath3")
+}
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4wal3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_00mdb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -84.5
+offset_right = 118.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Start
+"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Quit
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../VBoxContainer")
+libraries = {
+"": SubResource("AnimationLibrary_gnssg")
+}
+autoplay = "Title Animation"
+
+[node name="Title" type="Label" parent="AnimationPlayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -339.0
+offset_top = 146.0
+offset_right = 254.0
+offset_bottom = 204.0
+grow_horizontal = 2
+scale = Vector2(1.21, 1.21)
+theme_override_colors/font_color = Color(0.0223078, 0.254759, 0.336927, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_15ujb")
+theme_override_font_sizes/font_size = 62
+text = "Lost in the Fridge"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

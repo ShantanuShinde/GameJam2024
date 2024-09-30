@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://do2vby5fms4af"
-path="res://.godot/imported/Coffee Soda.ttf-2442bb94fb62dbd7b6cdce321c498e95.fontdata"
+path="res://.godot/imported/Coffee Soda.ttf-6ee20eaa5078c331a9801907c10085f1.fontdata"
 
 [deps]
 
-source_file="res://Coffee Soda.ttf"
-dest_files=["res://.godot/imported/Coffee Soda.ttf-2442bb94fb62dbd7b6cdce321c498e95.fontdata"]
+source_file="res://assets/Coffee Soda.ttf"
+dest_files=["res://.godot/imported/Coffee Soda.ttf-6ee20eaa5078c331a9801907c10085f1.fontdata"]
 
 [params]
 
