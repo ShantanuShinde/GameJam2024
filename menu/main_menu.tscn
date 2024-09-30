@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://vtp5b2ti7tfx"]
+
+[ext_resource type="FontFile" uid="uid://do2vby5fms4af" path="res://Coffee Soda.ttf" id="1_g63gf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00mdb"]
+bg_color = Color(0.411375, 0.681972, 0.307391, 1)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0.314551, 0.218955, 0.186759, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftdrt"]
+bg_color = Color(0.907703, 0.154879, 0.280736, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nflge"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncvhr"]
+bg_color = Color(0.91664, 0.91664, 0.91664, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_00mdb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -84.5
+offset_right = 118.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Start
+"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_ftdrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nflge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ncvhr")
+text = "Quit
+"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.0
+offset_top = 141.0
+offset_right = 176.0
+offset_bottom = 199.0
+grow_horizontal = 2
+scale = Vector2(1.21, 1.21)
+theme_override_colors/font_color = Color(0.0223078, 0.254759, 0.336927, 1)
+theme_override_fonts/font = ExtResource("1_g63gf")
+theme_override_font_sizes/font_size = 62
+text = "Mousin Time"
