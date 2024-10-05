@@ -1,0 +1,229 @@
+[gd_scene load_steps=16 format=3 uid="uid://ci55an4f41xg7"]
+
+[ext_resource type="Texture2D" uid="uid://baekolt06l4qf" path="res://assets/background.webp" id="1_ykq2n"]
+[ext_resource type="Texture2D" uid="uid://rh8awrhw5lep" path="res://assets/credits_title.png" id="2_rcuox"]
+[ext_resource type="Script" path="res://scenes/credits_scroll_container.gd" id="3_of6bf"]
+[ext_resource type="FontFile" uid="uid://cpwl6hcfrtsg6" path="res://assets/PressStart2P-Regular.ttf" id="3_uqibv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2wcy"]
+texture = ExtResource("1_ykq2n")
+
+[sub_resource type="Animation" id="Animation_61edo"]
+resource_name = "Credits"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(355, -176), Vector2(355, 38)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ScrollContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_h63pq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(355, -176)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ScrollContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dulvk"]
+_data = {
+"Credits": SubResource("Animation_61edo"),
+"RESET": SubResource("Animation_h63pq")
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_ax1w3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xl8y5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhqcq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06jjv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5gyo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbdhx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_bqcvw"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_ax1w3")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_ax1w3")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_ax1w3")
+VScrollBar/icons/increment = SubResource("ImageTexture_ax1w3")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_ax1w3")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_ax1w3")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_xl8y5")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_bhqcq")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_06jjv")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_e5gyo")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_tbdhx")
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j2wcy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dulvk")
+}
+autoplay = "Credits"
+
+[node name="TextureRect" type="TextureRect" parent="AnimationPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -500.0
+offset_right = 214.0
+offset_bottom = -327.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_rcuox")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AnimationPlayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -74.0
+offset_right = 396.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bqcvw")
+horizontal_scroll_mode = 0
+script = ExtResource("3_of6bf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimationPlayer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="Level Designer" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "Level Designer
+Juan Laseter"
+horizontal_alignment = 1
+
+[node name="UI  Designer" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "UI Designer
+Shantanu Shinde"
+horizontal_alignment = 1
+
+[node name="Character Programmer" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "Character Programmer
+Shaikh Hamid"
+horizontal_alignment = 1
+
+[node name="Music Design" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "Music Design
+Juan Laseter"
+horizontal_alignment = 1
+
+[node name="Visual Design" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "Visual Design
+Juan Laseter"
+horizontal_alignment = 1
+
+[node name="Research and Idea" type="Label" parent="AnimationPlayer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uqibv")
+theme_override_font_sizes/font_size = 27
+text = "Research and Idea Development
+Juan Laseter
+Shaikh Hamid
+Shantanu Shinde"
+horizontal_alignment = 1
