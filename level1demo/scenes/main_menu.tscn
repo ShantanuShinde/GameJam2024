@@ -1,0 +1,261 @@
+[gd_scene load_steps=30 format=3 uid="uid://vtp5b2ti7tfx"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4wal3"]
+[ext_resource type="Texture2D" uid="uid://baekolt06l4qf" path="res://assets/background.webp" id="2_fly2n"]
+[ext_resource type="Texture2D" uid="uid://b1fao1thxfqlk" path="res://assets/fridge.webp" id="3_c6kew"]
+[ext_resource type="Texture2D" uid="uid://bpiwr6gahl7vj" path="res://assets/title.webp" id="4_y7aku"]
+[ext_resource type="Texture2D" uid="uid://cxtjrargdbref" path="res://assets/start.png" id="5_rdw2a"]
+[ext_resource type="Texture2D" uid="uid://pg73vjgqjlpk" path="res://assets/start_hover.png" id="5_v402u"]
+[ext_resource type="Texture2D" uid="uid://b4bs2ywdw104y" path="res://assets/options.png" id="6_crcuu"]
+[ext_resource type="Texture2D" uid="uid://b24xlmv51gsv2" path="res://assets/options_hover.png" id="7_ddc67"]
+[ext_resource type="Texture2D" uid="uid://bmd7nmuwaij07" path="res://assets/credits.png" id="7_x58bh"]
+[ext_resource type="Texture2D" uid="uid://bpyt43ned7u13" path="res://assets/quit.png" id="8_3wy40"]
+[ext_resource type="Texture2D" uid="uid://cniod27a3vdjd" path="res://assets/credits_hover.png" id="9_0wscv"]
+[ext_resource type="Texture2D" uid="uid://cvl8ssd6f0c0q" path="res://assets/quit_hover.png" id="11_gup6w"]
+
+[sub_resource type="Animation" id="Animation_bnb7f"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Panel/Fridge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(877, -1), Vector2(-1, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Panel/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.03333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-475, 1), Vector2(-1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Panel/VBoxContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-385, 201), Vector2(56, 201)]
+}
+
+[sub_resource type="Animation" id="Animation_skcg6"]
+resource_name = "Title Animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Panel/Fridge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(877, -1), Vector2(-1, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Panel/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-475, 1), Vector2(0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Panel/VBoxContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-378, 216), Vector2(50, 216)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n8mrg"]
+_data = {
+"RESET": SubResource("Animation_bnb7f"),
+"Title Animation": SubResource("Animation_skcg6")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dp04r"]
+texture = ExtResource("2_fly2n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whjvl"]
+texture = ExtResource("3_c6kew")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e1ce"]
+texture = ExtResource("4_y7aku")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mr81r"]
+texture = ExtResource("5_v402u")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_667lh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlwh8"]
+texture = ExtResource("5_rdw2a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nw74e"]
+texture = ExtResource("7_ddc67")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aphdh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iujhs"]
+texture = ExtResource("6_crcuu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6fen"]
+texture = ExtResource("9_0wscv")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ph4u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pntut"]
+texture = ExtResource("7_x58bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v45r7"]
+texture = ExtResource("11_gup6w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1wvw"]
+texture = ExtResource("8_3wy40")
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4wal3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n8mrg")
+}
+autoplay = "RESET"
+
+[node name="Panel" type="Panel" parent="AnimationPlayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dp04r")
+
+[node name="Fridge" type="Panel" parent="AnimationPlayer/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -325.0
+offset_right = 878.0
+offset_bottom = 326.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_whjvl")
+
+[node name="Title" type="Panel" parent="AnimationPlayer/Panel"]
+layout_mode = 0
+offset_left = -475.0
+offset_top = 1.0
+offset_right = 678.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6e1ce")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimationPlayer/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -961.0
+offset_top = -123.0
+offset_right = -616.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.960001)
+theme_override_constants/separation = 8
+
+[node name="Start" type="Button" parent="AnimationPlayer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxTexture_mr81r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_667lh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vlwh8")
+
+[node name="Options" type="Button" parent="AnimationPlayer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxTexture_nw74e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aphdh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iujhs")
+
+[node name="Credits" type="Button" parent="AnimationPlayer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(345, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxTexture_d6fen")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ph4u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pntut")
+
+[node name="Quit" type="Button" parent="AnimationPlayer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_colors/font_pressed_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxTexture_v45r7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5ph4u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e1wvw")
+
+[connection signal="button_down" from="AnimationPlayer/Panel/VBoxContainer/Start" to="." method="_on_start_button_down"]
+[connection signal="pressed" from="AnimationPlayer/Panel/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="AnimationPlayer/Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
