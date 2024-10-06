@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7yq2yiqvxox3"]
+
+[ext_resource type="Texture2D" uid="uid://cg5abvuj0eam5" path="res://assets/tiles.png" id="1_jwlmt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yakp4"]
+radius = 6.31335
+height = 35.4301
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-2, 0.5)
+texture = ExtResource("1_jwlmt")
+region_enabled = true
+region_rect = Rect2(79.2902, 79.574, 32.6348, 17.4756)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.499969)
+rotation = 1.30846
+shape = SubResource("CapsuleShape2D_yakp4")
